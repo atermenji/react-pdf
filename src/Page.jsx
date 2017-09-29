@@ -43,7 +43,7 @@ export default class Page extends Component {
    * Called when a page is loaded successfully
    */
   onLoadSuccess = (page) => {
-    this.setState({ page });
+    console.log("ON LOAD SUCCESS CALLBACK FROM INSIDE");
 
     const { pageCallback } = this;
 
@@ -51,6 +51,8 @@ export default class Page extends Component {
       this.props.onLoadSuccess,
       pageCallback,
     );
+
+    this.setState({ page });
   }
 
   /**
